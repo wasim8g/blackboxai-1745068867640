@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instagram Clone on Arbitrum</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-900">
+    <header class="bg-white shadow p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Instagram Clone on Arbitrum</h1>
+        <button id="connectWalletBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Connect Wallet</button>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-4">
+        <section id="userProfile" class="mb-8 hidden">
+            <div class="flex items-center space-x-4">
+                <img id="profileImage" src="" alt="Profile Image" class="w-16 h-16 rounded-full object-cover" />
+                <div>
+                    <h2 id="username" class="text-xl font-semibold"></h2>
+                    <p id="bio" class="text-gray-600"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="createPostSection" class="mb-8 hidden">
+            <h3 class="text-lg font-semibold mb-2">Create a Post</h3>
+            <input id="imageHashInput" type="text" placeholder="Image IPFS Hash or URL" class="w-full p-2 border rounded mb-2" />
+            <textarea id="captionInput" placeholder="Caption" class="w-full p-2 border rounded mb-2"></textarea>
+            <button id="createPostBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Post</button>
+        </section>
+
+        <section id="postsSection">
+            <h3 class="text-lg font-semibold mb-4">Posts</h3>
+            <div id="postsContainer" class="space-y-6"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
